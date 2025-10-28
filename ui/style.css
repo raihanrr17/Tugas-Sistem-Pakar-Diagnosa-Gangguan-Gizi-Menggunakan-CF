@@ -1,1 +1,241 @@
+/* Base and vars */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --background: #f1f5f9;
+  --card: #ffffff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --radius: 0.75rem;
+}
 
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 2rem 1rem;
+}
+
+/* Container adjustments */
+.container {
+  width: 100%;
+  max-width: 1024px; /* Increased from 800px */
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  padding: 2rem;
+}
+
+/* Typography adjustments */
+h2 {
+  font-size: 1.75rem; /* Slightly reduced */
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.938rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.section-title {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Form adjustments */
+.form-section {
+  margin-bottom: 2.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
+}
+
+.input-field {
+  padding: 0.625rem 0.875rem;
+  height: 2.75rem;
+  font-size: 0.938rem;
+}
+
+/* Checkbox grid improvements */
+.checkbox-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  background: var(--background);
+  border-radius: var(--radius);
+  max-height: 400px; /* Tinggi maksimal area scroll */
+  overflow-y: auto;
+}
+
+.checkbox-item {
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: calc(var(--radius) - 0.25rem);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.checkbox-item:hover {
+  background: #f8fafc;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+  flex: 1;
+  margin: 0;
+  font-size: 0.938rem;
+}
+
+/* Scrollbar styling */
+.checkbox-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.checkbox-grid::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 4px;
+}
+
+.checkbox-grid::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+.checkbox-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Firefox scrollbar */
+.checkbox-grid {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--background);
+}
+
+input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.75rem;
+}
+
+/* Button improvements */
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn-chip {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  flex: none; /* Prevent stretching */
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2:1 ratio */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.938rem;
+  border-radius: calc(var(--radius) - 0.25rem);
+}
+
+/* Results section */
+.result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  font-size: 0.938rem;
+  line-height: 1.6;
+}
+
+/* Small helpers */
+.sr-only{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
+
+/* Gejala item text */
+.gejala-label{
+  font-size:14px;
+  color:#15324a;
+  line-height:1.2;
+}
+
+/* Tidy default placeholder */
+::placeholder{ color:#9aa4b2; opacity:1 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  button {
+    width: 100%;
+  }
+}
