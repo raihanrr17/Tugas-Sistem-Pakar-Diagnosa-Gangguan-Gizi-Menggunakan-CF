@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sistem Pakar Gangguan Gizi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="engine.js" defer></script>
+</head>
+<body>
+  <main class="container" role="main">
+    <div class="card">
+      <div class="card-header">
+        <h2>Diagnosa Gangguan Gizi</h2>
+        <p class="subtitle">Masukkan data dan pilih gejala yang dialami untuk mendapatkan diagnosa</p>
+      </div>
+
+      <form id="diagnosaForm" class="form" onsubmit="return false;">
+        <div class="form-section">
+          <h3 class="section-title">Data Antropometri</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="berat">Berat Badan (kg)</label>
+              <input type="number" id="berat" name="berat" class="input-field" placeholder="Contoh: 60" min="1" step="0.1">
+            </div>
+
+            <div class="form-group">
+              <label for="tinggi">Tinggi Badan (cm)</label>
+              <input type="number" id="tinggi" name="tinggi" class="input-field" placeholder="Contoh: 165" min="30" step="0.1">
+            </div>
+
+            <div class="form-group">
+              <label for="aktivitas">Tingkat Aktivitas</label>
+              <select id="aktivitas" name="aktivitas" class="input-field">
+                <option value="" selected disabled>Pilih tingkat aktivitas</option>
+                <option value="1.2">Sedentary — Jarang olahraga</option>
+                <option value="1.375">Ringan — 1-3x seminggu</option>
+                <option value="1.55">Sedang — 3-5x seminggu</option>
+                <option value="1.725">Aktif — 6-7x seminggu</option>
+                <option value="1.9">Sangat aktif — Atlet/kerja fisik</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Gejala yang Dialami</h3>
+          <div class="controls">
+            <button type="button" id="selectAll" class="btn-chip">Pilih Semua</button>
+            <button type="button" id="clearAll" class="btn-chip">Bersihkan</button>
+          </div>
+
+          <div id="gejala-list" class="checkbox-grid"></div>
+        </div>
+
+        <div class="form-actions">
+          <button id="btnProses" type="button" class="btn-primary">Diagnosa</button>
+          <button id="btnReset" type="reset" class="btn-secondary">Reset</button>
+        </div>
+      </form>
+
+      <section id="hasil" class="result" aria-live="assertive"></section>
+    </div>
+  </main>
+
+  <script>
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      const selectAll = document.getElementById('selectAll');
+      const clearAll = document.getElementById('clearAll');
+      selectAll?.addEventListener('click', () => {
+        document.querySelectorAll('#gejala-list input[type="checkbox"]').forEach(cb => cb.checked = true);
+      });
+      clearAll?.addEventListener('click', () => {
+        document.querySelectorAll('#gejala-list input[type="checkbox"]').forEach(cb => cb.checked = false);
+      });
+
+      // Reset hasil saat form di-reset
+      document.getElementById('btnReset')?.addEventListener('click', () => {
+        document.getElementById('hasil').innerHTML = '';
+      });
+    });
+  </script>
+</body>
+</html>
 
