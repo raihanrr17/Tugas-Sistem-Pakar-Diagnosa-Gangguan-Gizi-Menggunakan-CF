@@ -1,0 +1,196 @@
+[
+  {
+    "id": "R1",
+    "kategori_imt": ["kurus"],
+    "if": ["bengkak_perut", "diare", "rambut_mudah_rontok", "kulit_kering"],
+    "then": "kwashiorkor",
+    "cf_per_gejala": {
+      "bengkak_perut": 0.8,
+      "diare": 0.7,
+      "rambut_mudah_rontok": 0.6,
+      "kulit_kering": 0.5
+    }
+  },
+  {
+    "id": "R2",
+    "kategori_imt": ["kurus"],
+    "if": ["lesu", "nafsu_makan_hilang", "berat_badan_tidak_naik", "perut_buncit"],
+    "then": "marasmus",
+    "cf_per_gejala": {
+      "lesu": 0.8,
+      "nafsu_makan_hilang": 0.7,
+      "berat_badan_tidak_naik": 0.75,
+      "perut_buncit": 0.65
+    }
+  },
+  {
+    "id": "R3",
+    "kategori_imt": ["kurus"],
+    "if": ["sering_kelelahan", "haus", "berat_badan_turun"],
+    "then": "gula_darah",
+    "cf_per_gejala": {
+      "sering_kelelahan": 0.8,
+      "haus": 0.7,
+      "berat_badan_turun": 0.75
+    }
+  },
+  {
+    "id": "R4",
+    "kategori_imt": ["kurus"],
+    "if": ["sakit_kepala", "pusing", "detak_jantung_cepat"],
+    "then": "hipertensi",
+    "cf_per_gejala": {
+      "sakit_kepala": 0.8,
+      "pusing": 0.7,
+      "detak_jantung_cepat": 0.85
+    }
+  },
+  {
+    "id": "R5",
+    "kategori_imt": ["kurus"],
+    "if": ["sering_berkeringat", "nyeri_dada", "sesak_napas"],
+    "then": "jantung",
+    "cf_per_gejala": {
+      "sering_berkeringat": 0.7,
+      "nyeri_dada": 0.8,
+      "sesak_napas": 0.9
+    }
+  },
+  {
+    "id": "R6",
+    "kategori_imt": ["kurus"],
+    "if": ["lesu", "diare", "sering_mual", "muntah"],
+    "then": "penurunan_daya_tahan_tubuh",
+    "cf_per_gejala": {
+      "lesu": 0.75,
+      "diare": 0.7,
+      "sering_mual": 0.65,
+      "muntah": 0.6
+    }
+  },
+  {
+    "id": "R7",
+    "kategori_imt": ["normal"],
+    "if": ["sering_kelelahan", "haus", "berat_badan_turun"],
+    "then": "gula_darah",
+    "cf_per_gejala": {
+      "sering_kelelahan": 0.7,
+      "haus": 0.65,
+      "berat_badan_turun": 0.6
+    }
+  },
+  {
+    "id": "R8",
+    "kategori_imt": ["normal"],
+    "if": ["sakit_kepala", "pusing", "wajah_kemerahan"],
+    "then": "hipertensi",
+    "cf_per_gejala": {
+      "sakit_kepala": 0.8,
+      "pusing": 0.7,
+      "wajah_kemerahan": 0.75
+    }
+  },
+  {
+    "id": "R9",
+    "kategori_imt": ["normal"],
+    "if": ["sering_berkeringat", "nyeri_dada", "sesak_napas"],
+    "then": "jantung",
+    "cf_per_gejala": {
+      "sering_berkeringat": 0.75,
+      "nyeri_dada": 0.8,
+      "sesak_napas": 0.9
+    }
+  },
+  {
+    "id": "R10",
+    "kategori_imt": ["normal"],
+    "if": ["lesu", "diare", "sering_mual", "muntah"],
+    "then": "penurunan_daya_tahan_tubuh",
+    "cf_per_gejala": {
+      "lesu": 0.7,
+      "diare": 0.65,
+      "sering_mual": 0.6,
+      "muntah": 0.55
+    }
+  },
+  {
+    "id": "R11",
+    "kategori_imt": ["gemuk"],
+    "if": ["sering_kelelahan", "sering_berkeringat", "berat_badan_berlebih"],
+    "then": "obesitas",
+    "cf_per_gejala": {
+      "sering_kelelahan": 0.85,
+      "sering_berkeringat": 0.8,
+      "berat_badan_berlebih": 0.9
+    }
+  },
+  {
+    "id": "R12",
+    "kategori_imt": ["gemuk"],
+    "if": ["sering_kelelahan", "haus", "berat_badan_turun"],
+    "then": "gula_darah",
+    "cf_per_gejala": {
+      "sering_kelelahan": 0.8,
+      "haus": 0.7,
+      "berat_badan_turun": 0.75
+    }
+  },
+  {
+    "id": "R13",
+    "kategori_imt": ["gemuk"],
+    "if": ["sakit_kepala", "pusing", "wajah_kemerahan", "detak_jantung_cepat"],
+    "then": "hipertensi",
+    "cf_per_gejala": {
+      "sakit_kepala": 0.9,
+      "pusing": 0.85,
+      "wajah_kemerahan": 0.8,
+      "detak_jantung_cepat": 0.95
+    }
+  },
+  {
+    "id": "R14",
+    "kategori_imt": ["gemuk"],
+    "if": ["sering_berkeringat", "nyeri_dada", "sesak_napas"],
+    "then": "jantung",
+    "cf_per_gejala": {
+      "sering_berkeringat": 0.8,
+      "nyeri_dada": 0.85,
+      "sesak_napas": 0.9
+    }
+  },
+  {
+    "id": "R15",
+    "kategori_imt": ["gemuk"],
+    "if": ["lesu", "nafsu_makan_hilang", "sering_mual", "muntah"],
+    "then": "penurunan_daya_tahan_tubuh",
+    "cf_per_gejala": {
+      "lesu": 0.75,
+      "nafsu_makan_hilang": 0.7,
+      "sering_mual": 0.65,
+      "muntah": 0.6
+    }
+  },
+  {
+    "id": "R16",
+    "kategori_imt": ["kurus", "normal", "gemuk"],
+    "operator": "or",
+    "if": ["lesu", "sering_mual", "berkeringat_dingin"],
+    "then": "penurunan_daya_tahan_tubuh",
+    "cf_per_gejala": {
+      "lesu": 0.7,
+      "sering_mual": 0.65,
+      "berkeringat_dingin": 0.6
+    }
+  },
+  {
+    "id": "R17",
+    "kategori_imt": ["kurus", "normal", "gemuk"],
+    "operator": "or",
+    "if": ["gula_darah", "hipertensi"],
+    "then": "komplikasi_jantung",
+    "cf_per_gejala": {
+      "gula_darah": 0.75,
+      "hipertensi": 0.78
+    }
+  }
+]
