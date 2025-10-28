@@ -1,5 +1,5 @@
 async function loadRules() {
-  const response = await fetch("rules.json");
+  const response = await fetch("ui/rules.json");
   return await response.json();
 }
 
